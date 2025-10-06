@@ -1,0 +1,20 @@
+<div class="flex">
+    <app-sidebar></app-sidebar>
+    <div class="flex-1">
+        <app-navbar></app-navbar>
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-4">Map</h2>
+            <div class="mb-3">
+                <input #fromBox placeholder="From" class="border p-2 rounded mr-2" />
+                <button (click)="search(fromBox.value, 'from')" class="bg-blue-500 text-white px-3 py-1 rounded">Set
+                    From</button>
+            </div>
+            <div class="mb-3">
+                <input #toBox placeholder="To" class="border p-2 rounded mr-2" />
+                <button (click)="search(toBox.value, 'to')" class="bg-green-500 text-white px-3 py-1 rounded">Set
+                    To</button>
+            </div>
+            <div id="map" style="height: 500px;" class="rounded shadow"></div>
+        </div>
+    </div>
+</div>

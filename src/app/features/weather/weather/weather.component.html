@@ -1,0 +1,19 @@
+<div class="flex">
+    <app-sidebar></app-sidebar>
+    <div class="flex-1">
+        <app-navbar></app-navbar>
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-4">Weather</h2>
+            <input [formControl]="city" class="border p-2 rounded mb-4 w-64" placeholder="Enter city" />
+            <div *ngIf="loading" class="bg-blue-500 text-white p-2">Loading...</div>
+            <div *ngIf="error" class="bg-yellow-400 p-2">{{error}}</div>
+            <div *ngIf="current">
+                <h3 class="font-bold">{{city.value}}: {{current.temp}}°C</h3>
+                <h4 class="mt-4 font-semibold">7 Day Forecast</h4>
+                <ul>
+                    <li *ngFor="let f of forecast">{{f.day}}: {{f.temp}}°C</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

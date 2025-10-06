@@ -1,0 +1,20 @@
+<div class="flex">
+    <app-sidebar></app-sidebar>
+    <div class="flex-1">
+        <app-navbar></app-navbar>
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-4">{{id ? 'Edit Todo' : 'New Todo'}}</h2>
+
+            <input [(ngModel)]="title" placeholder="Title" class="border p-2 rounded w-full mb-3" />
+            <textarea [(ngModel)]="description" placeholder="Description"
+                class="border p-2 rounded w-full mb-3"></textarea>
+            <label class="flex items-center mb-3">
+                <input type="checkbox" [(ngModel)]="isCompleted" class="mr-2" /> Completed
+            </label>
+
+            <button (click)="save()" class="bg-blue-500 text-white px-4 py-2 rounded">
+                {{id ? 'Update' : 'Save'}}
+            </button>
+        </div>
+    </div>
+</div>

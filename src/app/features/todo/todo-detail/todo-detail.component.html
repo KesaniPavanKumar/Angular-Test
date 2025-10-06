@@ -1,0 +1,14 @@
+<div class="flex">
+    <app-sidebar></app-sidebar>
+    <div class="flex-1">
+        <app-navbar></app-navbar>
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-3">Todo Details</h2>
+            <div *ngIf="todo">
+                <p><b>ID:</b> {{todo.id}}</p>
+                <p><b>Title:</b> {{todo.title}}</p>
+                <p><b>Description:</b> {{todo.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
